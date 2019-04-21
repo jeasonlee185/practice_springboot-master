@@ -1,0 +1,17 @@
+####
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/userdemo
+    username: root
+    password: ljy185
+#    password:
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径mybatis:
+  #  mapper-locations: classpath:resources/mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径mybatis:
+  type-aliases-package: com.jeasonlee.entity  # 注意：对应实体类的路径
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
